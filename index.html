@@ -166,7 +166,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">影片專區</h2>
-                    <h3 class="section-subheading text-muted">還沒放</h3>
+                    <h3 class="section-subheading text-muted">這裡我們會和你分享一些有趣的事物!</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -419,7 +419,7 @@
                                     <p class="item-intro text-muted">Japan</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/services/日本(2).jpg" alt="..." />
                                     <p>日本作為一個融合古老與現代的國家，提供了無數讓大學生驚艷的都市探險。從東京的繁華都市風情到大阪的美食天堂，每一個城市都散發著令人著迷的魅力。大學生們可以探索東京塔的霓虹燈海洋，漫步於澀谷的時尚街區，或是品嚐大阪的獨特美食文化。此外，他們還能夠體驗現代科技的奇幻世界，探索京都的歷史遺跡，以及感受神戶的國際化氛圍。在這個充滿活力的國家裡，大學生們將會度過一段充滿探險與驚喜的都市之旅。</p>
-                                    <h3 class="text-uppercase">【日本景點必打卡】</h3>
+                                    <h3 class="text-uppercase ">【日本景點必打卡】</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tr class="table-primary">
                                             <th style="width: 150px;">景點</th>
@@ -485,7 +485,26 @@
                                             <td>在江之島海岸線，漫步感受湘南海岸的風情，再到達鐮倉高校前，拍一組《灌籃高手》同款，再體驗乘坐江之電（連接藤澤至鐮倉的路面電車行經路線含括了鐮倉大部分的著名景點）。</td>
                                         </tr>
                                     </table>
+                                    <!-- 按鈕部分-->
+                                    <div class="btn-container">
+                                        <a class="btn btn-primary btn-xl text-uppercase"  onclick="toggleText()">Tips</a>
+                                        <div class="btn-text">冷知識1</div>
+                                        <div class="btn-text">冷知識2</div>
+                                        <div class="btn-text">冷知識3</div>
+                                        <div class="btn-text">冷知識4</div>
+                                        
+                                    <script> 
+                                        let textIndex = 0;
+                                        const texts = document.querySelectorAll('.btn-text');
 
+                                        function toggleText() {
+                                        texts.forEach(text => text.style.display = 'none');
+                                        texts[textIndex].style.display = 'block';
+                                        textIndex = (textIndex + 1) % texts.length;
+                                                              }
+                                    </script>
+                                    </div>
+                                    <!-- 按鈕部分結束-->
                                     <ul class="list-inline">
                                         <li>
                                             <strong>推薦行程:</strong>
@@ -583,6 +602,8 @@
                                             <td></td>
                                         </tr>
                                     </table>
+                                    <script src="button.js"></script> 
+                                    
                                     <ul class="list-inline">
                                         <li>
                                             <strong>推薦行程:</strong>
