@@ -15,3 +15,7 @@
     border: 5px solid black; /* 使用 1px 寬度的黑色格線 */
 }
 
+.davidbtn:hover .fa-circle{
+    color: #ff4500; /* 改变悬停时圆圈的颜色 */
+}
+
