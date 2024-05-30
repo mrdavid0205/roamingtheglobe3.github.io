@@ -15,6 +15,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="my_styles.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -456,26 +458,6 @@
                                             <td>在江之島海岸線，漫步感受湘南海岸的風情，再到達鐮倉高校前，拍一組《灌籃高手》同款，再體驗乘坐江之電（連接藤澤至鐮倉的路面電車行經路線含括了鐮倉大部分的著名景點）。</td>
                                         </tr>
                                     </table>
-                                    <!-- 按鈕部分-->
-                                    <div class="btn-container">
-                                        <a class="btn btn-primary btn-xl text-uppercase"  onclick="toggleText()">Tips</a>
-                                        <div class="btn-text">冷知識1</div>
-                                        <div class="btn-text">冷知識2</div>
-                                        <div class="btn-text">冷知識3</div>
-                                        <div class="btn-text">冷知識4</div>
-                                        
-                                    <script> 
-                                        let textIndex = 0;
-                                        const texts = document.querySelectorAll('.btn-text');
-
-                                        function toggleText() {
-                                        texts.forEach(text => text.style.display = 'none');
-                                        texts[textIndex].style.display = 'block';
-                                        textIndex = (textIndex + 1) % texts.length;
-                                                              }
-                                    </script>
-                                    </div>
-                                    <!-- 按鈕部分結束-->
                                     <!--ul class="list-inline">
                                         <li>
                                             <strong>推薦行程:</strong>
@@ -688,72 +670,68 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">美國</h2>
                                     <p class="item-intro text-muted">USA</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/美國(2).jpg" alt="..." />
-                                    <p>美國作為世界上最受歡迎的旅遊目的地之一，擁有眾多令人嚮往的城市和景點，尤其對大學生來說，是一個絕佳的探險之地。紐約市作為美國的文化中心和世界級都市，讓大學生們可以感受到繁華的都市生活和多元文化的融合。他們可以在曼哈頓的摩天大樓中漫步，探索中央公園的美麗景色，品嚐來自世界各地的美食，以及欣賞百老匯的精彩表演。另一個不可錯過的目的地是洛杉磯，這個城市以夢想和娛樂聞名。大學生們可以在洛杉磯的好萊塢體驗電影明星的生活，參觀迪士尼樂園度過一個充滿樂趣的日子，或者沉浸在聖塔莫尼卡海灘的陽光和海浪中。這兩個城市為大學生提供了無數的探險和娛樂機會，讓他們度過一段難忘的美國之旅。</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/services/LA.jpg" alt="..." />
+                                    <p>美國作為世界上最受歡迎的旅遊目的地之一，擁有眾多令人嚮往的城市和景點，尤其對大學生來說，是一個絕佳的探險之地。而我們這次要推薦的是洛杉磯。洛杉磯是個絕佳的旅遊勝地，這裡有無數的景點和活動適合你的冒險心。洛杉磯擁有陽光明媚的海灘、豐富的文化景點和多樣的娛樂活動，讓你無論是尋求放鬆還是刺激都能找到理想的去處，不僅是一個旅遊勝地，更是一個能激發你靈感和創意的地方。</p>
                                     <h3 class="text-uppercase">【美國景點必打卡】</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tr class="table-primary">
                                             <th style="width: 150px;">景點</th>
                                             <th>簡介</th>
                                         <tr>
-                                            <td>1. ：</td>
-                                            <td></td>
+                                            <td>1. 格里菲斯公園：</td>
+                                            <td>提供壯觀的城市和好萊塢標誌的景色，且天文台有迷人的展覽和天文館。</td>
                                         </tr>
                                         <tr>
-                                            <td>2. ：</td>
-                                            <td></td>
+                                            <td>2. 好萊塢星光大道：</td>
+                                            <td>可以沿著好萊塢大道漫步，看看鑲嵌在人行道上的著名明星。</td>
                                         </tr>
                                         <tr>
-                                            <td>3. ：</td>
-                                            <td></td>
+                                            <td>3. 聖莫尼卡碼頭：</td>
+                                            <td>標誌性的碼頭，擁有遊樂園、水族館和美麗的海景。是享受海灘輕鬆一天的好去處。</td>
                                         </tr>
                                         <tr>
-                                            <td>4. ：</td>
-                                            <td></td>
+                                            <td>4. 洛杉磯郡立美術館 ：</td>
+                                            <td>西部最大的藝術博物館，收藏了來自各個時期和文化的廣泛藝術品。</td>
                                         </tr>
                                         <tr>
-                                            <td>5. ：</td>
-                                            <td></td>
+                                            <td>5. 環球影城好萊塢：</td>
+                                            <td>電影製片廠和主題公園，提供令人興奮的遊樂設施、表演，以及電影製作的幕後一瞥。</td>
                                         </tr>
                                         <tr>
-                                            <td>6. ：</td>
-                                            <td></td>
+                                            <td>6. 羅迪歐大道：</td>
+                                            <td>比佛利山著名的購物街，以豪華精品店和高端時尚聞名。</td>
                                         </tr>
                                         <tr>
-                                            <td>7. ：</td>
-                                            <td></td>
+                                            <td>7. 威尼斯海灘：</td>
+                                            <td>充滿活力和獨特的海濱，以其波希米亞精神、肌肉海灘和充滿活力的木板路著稱。</td>
                                         </tr>
                                         <tr>
-                                            <td>8. ：</td>
-                                            <td></td>
+                                            <td>8. 好萊塢標誌：</td>
+                                            <td>娛樂業的象徵，從格里菲斯公園或周圍的小徑上遠足是最佳觀賞方式。</td>
                                         </tr>
                                         <tr>
-                                            <td>9. ：</td>
-                                            <td></td>
+                                            <td>9. 博德博物館：</td>
+                                            <td>位於市中心的當代藝術博物館，擁有令人印象深刻的收藏，包括傑夫·昆斯、安迪·沃霍爾等的作品。</td>
                                         </tr>
                                         <tr>
-                                            <td>10. ：</td>
-                                            <td></td>
+                                            <td>10. 沃爾特·迪士尼音樂廳：</td>
+                                            <td>由弗蘭克·蓋里設計的建築奇蹟，洛杉磯愛樂樂團的所在地。</td>
                                         </tr>
                                         <tr>
-                                            <td>11.  ：</td>
-                                            <td></td>
+                                            <td>11. 拉布雷亞瀝青坑：</td>
+                                            <td>一個獨特的地點，天然瀝青保存了史前化石，你可以看到古生物學家在工作。</td>
                                         </tr>
                                         <tr>
-                                            <td>12. ：</td>
-                                            <td></td>
+                                            <td>12. 洛杉磯動物園：</td>
+                                            <td>位於格里菲斯公園，擁有各種各樣的動物和美麗的植物收藏。</td>
                                         </tr>
                                         <tr>
-                                            <td>13. ：</td>
-                                            <td></td>
+                                            <td>13. 馬里布：</td>
+                                            <td>以其美麗的海灘如祖馬海灘和厄爾馬塔多爾海灘以及風景優美的海岸線駕車而聞名。</td>
                                         </tr>
                                         <tr>
-                                            <td>14. ：</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>15. ：</td>
-                                            <td></td>
+                                            <td>14. 洛杉磯市中心藝術區：</td>
+                                            <td>一個充滿街頭藝術、畫廊、時尚餐廳和獨特商店的充滿活力的街區。</td>
                                         </tr>
                                     </table>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
