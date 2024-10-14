@@ -61,6 +61,9 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+                <div>
+                    <h3>推薦旅遊地點: <span id="random-location"></span></h3>
+                </div>
                 <div class="masthead-subheading">迎接畢業之旅的新冒險</div>
                 <div class="masthead-heading text-uppercase">一起打造屬於你的畢業紀念！</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#projects">繼續探索</a>
@@ -914,43 +917,6 @@
                                             <td>一個充滿街頭藝術、畫廊、時尚餐廳和獨特商店的充滿活力的街區。</td>
                                         </tr>
                                     </table>
-                                    
-                                      <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <!-- 插入的功能（選擇城市和隨機生成景點）開始 -->
-                                    <h3 class="text-uppercase ">【隨機產生旅遊景點】</h3>
-
-                                    <div class="dropdown my-3">
-                                        <label for="city-select-usa">選擇城市：</label>
-                                        <select id="city-select-usa" class="form-control" onchange="clearDestinations('usa')">
-                                            <option value="洛杉磯">洛杉磯</option>
-                                        </select>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="label">上午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="usa-morning-photo" src="" alt="上午景點" class="photo" />
-                                                <div id="usa-morning-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="label">下午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="usa-afternoon-photo" src="" alt="下午景點" class="photo" />
-                                                <div id="usa-afternoon-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-primary" onclick="generatePhotos('usa')">隨機生成景點</button>
-                                    </div>
-                                    
-                                     <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         回到上一頁
@@ -1045,44 +1011,6 @@
                                             <td>它其實並不在巴黎，但去那裡非常容易。如果你喜歡迪士尼樂園，我認為值得去。特別是煙火和燈光秀。</td>
                                         </tr>
                                     </table>
-
-                                    <div class="dropdown my-3">
-                                        <label for="city-select-france">選擇城市：</label>
-                                        <select id="city-select-france" class="form-control" onchange="clearDestinations('france')">
-                                            <option value="巴黎">巴黎</option>
-                                        </select>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <!-- 插入的功能（選擇城市和隨機生成景點）開始 -->
-                                    <h3 class="text-uppercase ">【隨機產生旅遊景點】</h3>
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="label">上午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="france-morning-photo" src="" alt="上午景點" class="photo" />
-                                                <div id="france-morning-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="label">下午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="france-afternoon-photo" src="" alt="下午景點" class="photo" />
-                                                <div id="france-afternoon-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-primary" onclick="generatePhotos('france')">隨機生成景點</button>
-                                    </div>
-
-                                    <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         回到上一頁
@@ -1174,44 +1102,6 @@
                                             <td>收藏了大量無價的藝術品和古代文物，展現了數個世紀的文化和藝術精華。這裡的亮點包括西斯汀小堂的壁畫、拉斐爾房間、以及無數古希臘和羅馬雕塑。</td>
                                         </tr>
                                     </table>
-
-                                    <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <!-- 插入的功能（選擇城市和隨機生成景點）開始 -->
-                                    <h3 class="text-uppercase ">【隨機產生旅遊景點】</h3>
-
-                                    <div class="dropdown my-3">
-                                        <label for="city-select-italy">選擇城市：</label>
-                                        <select id="city-select-italy" class="form-control" onchange="clearDestinations('italy')">
-                                            <option value="米蘭">米蘭</option>
-                                            <option value="羅馬">羅馬</option>
-                                        </select>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="label">上午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="italy-morning-photo" src="" alt="上午景點" class="photo" />
-                                                <div id="italy-morning-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="label">下午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="italy-afternoon-photo" src="" alt="下午景點" class="photo" />
-                                                <div id="italy-afternoon-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                     <div class="spacer" style="height: 50px;"></div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-primary" onclick="generatePhotos('italy')">隨機生成景點</button>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                     <div class="spacer" style="height: 50px;"></div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         回到上一頁
@@ -1277,100 +1167,17 @@
             
             // 曼谷和芭達雅的景點資料
             const bangkokSpots = [
-                { name: "暹羅中心", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__PI5ENoDTs6oSbCiiqS3goe504IoDFx83g&s" },
-                { name: "鄭王廟", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJFGH7YAGkRh6CoW8K5MHylCyhTX-v84NMFw&s" },
-                { name: "四面佛", url: "https://www.sicthailand.com/wp/wp-content/uploads/2020/02/TB26qs0chhmpuFjSZFyXXcLdFXa_0-travel.jpg" },
-                { name: "洽圖洽週末市集", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVxxqeYCsYFuN5DG9YyT9xMqNGcmfA4hQKNw&s" },
-                { name: "曼谷大皇宮", url: "https://i0.wp.com/travo.guide/wp-content/uploads/2019/12/Royal-Grand-Palace-Bangkok-Tour-Half-Day1.jpg?fit=1280%2C720&ssl=1" },
-                { name: "考山路", url: "https://gothailand.com.tw/wp-content/uploads/2023/04/139686671_m_normal_none-1024x683.jpg" },
-                { name: "暹羅百麗宮", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/d7/7c/c2/apply-tourist-card-to.jpg?w=1200&h=-1&s=1" },
-                { name: "水門寺大佛", url: "https://blog.hamibook.com.tw/wp-content/uploads/2022/11/%E9%8F%A1%E9%80%B1%E5%88%8A%E7%AC%AC321%E6%9C%9F_%E6%9B%BC%E8%B0%B7_00.jpg" },
-                { name: "臥佛寺", url: "https://media.istockphoto.com/id/467571456/zh/%E7%85%A7%E7%89%87/reclining-buddha-wat-pho-temple-bangkok-thailand.jpg?s=612x612&w=0&k=20&c=UlLj7B-xoILP501Fj_r1Cu3yzfGvc3ADaRdJntHnkDM=" },
-                { name: "唐人街", url: "https://www.agoda.com/wp-content/uploads/2024/07/Bangkok-Yaowarat-Featured-1244x700.jpg" }
+                { name: "大皇宮", url: "https://example.com/bangkok-grand-palace.jpg" },
+                { name: "臥佛寺", url: "https://example.com/bangkok-wat-pho.jpg" },
+                { name: "水上市場", url: "https://example.com/bangkok-floating-market.jpg" }
+                // 添加更多曼谷的景點
             ];
-
             const pattayaSpots = [
-                { name: "真理寺", url: "https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_7313/20170905113940_ebUHc/jpg" },
-                { name: "格蘭島", url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/61/b3/9c.jpg" },
-                { name: "Tutu Beach", url: "https://networkwatcherrgvnetdiag.blob.core.windows.net/gds-blob/production/products/03411134-909d-47ff-8abc-3db6d55945f6/7.jpg" },
-                { name: "東芭樂園", url: "https://baofamily.tw/wp-content/uploads/2023/09/%E6%9D%B1%E8%8A%AD%E6%A8%82%E5%9C%92-Nong-Nooch-Village-70.jpg" }
+                { name: "芭達雅海灘", url: "https://example.com/pattaya-beach.jpg" },
+                { name: "真理寺", url: "https://example.com/pattaya-sanctuary-of-truth.jpg" },
+                { name: "步行街", url: "https://example.com/pattaya-walking-street.jpg" }
+                // 添加更多芭達雅的景點
             ];
-            // 洛杉磯景點資料
-            const losAngelesSpots = [
-                { name: "格里菲斯公園", url: "https://www.hellola.cn/wp-content/uploads/2019/10/the-griffith-observatory02.jpg" },
-                { name: "好萊塢星光大道", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/480000/480638-Hollywood-Walk-Of-Fame.jpg" },
-                { name: "聖莫尼卡碼頭", url: "https://www.ccyp.com/media/topic/201410/20141022153241785.jpg" },
-                { name: "洛杉磯郡立美術館", url: "https://d1qlj1o6gdgqqt.cloudfront.net/wp-content/uploads/2024/05/LACMA-1024x623.jpg" },
-                { name: "環球影城好萊塢", url: "https://p2.itc.cn/q_70/images01/20230220/4f3343e9e3084ed495c7cb6563d1bb87.png" },
-                { name: "羅迪歐大道", url: "https://static.rti.org.tw/assets/thumbnails/2020/05/06/20200506000005M.jpg" },
-                { name: "威尼斯海灘", url: "https://media.istockphoto.com/id/638340372/zh/%E7%85%A7%E7%89%87/tourists-walking-on-footpath-by-beach-during-sunset.jpg?s=612x612&w=0&k=20&c=VOBDVvZa9RrXERyJl4yN_szRzww-rgdUR2rRg1A_Kwk=" },
-                { name: "好萊塢標誌", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01ahxbSwqYD3sO3Pt5bTHpu-dRm-bYu2_rA&s" },
-                { name: "沃爾特·迪士尼音樂廳", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/238000/238511-Walt-Disney-Concert-Hall.jpg" },
-                { name: "拉布雷亞瀝青坑", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/20000/20485-La-Brea-Tar-Pits.jpg" },
-                { name: "洛杉磯動物園", url: "https://uc.udn.com.tw/photo/wj/realtime/2023/10/28/26602369.jpeg" },
-                { name: "馬里布", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKCHzCWsA3tAbueh5E5jGkyxCowRFsWxyavA&s" },
-                { name: "洛杉磯市中心藝術區", url: "https://media.istockphoto.com/id/669384646/zh/%E7%85%A7%E7%89%87/%E7%95%B6%E4%BB%A3%E8%97%9D%E8%A1%93%E5%8D%9A%E7%89%A9%E9%A4%A8-%E6%B4%9B%E6%9D%89%E7%A3%AF%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9E%E5%B7%9E%E7%BE%8E%E5%9C%8B.jpg?s=612x612&w=0&k=20&c=h8jo-UuJ3iMOvcquL1KM9Fnw7Uez1K7IQnzOyU-099o=" }
-            ];
-            // 巴黎景點資料
-            const parisSpots = [
-                { name: "艾菲爾鐵塔", url: "https://image.cdn-eztravel.com.tw/dDej7kIJwJPCYpz-ie3Qypzb0VqkVQqZMC6QVRVDluA/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvRlJfMTAzNjg3MDk3Mi5qcGc.jpg" },
-                { name: "羅浮宮", url: "https://www.sundaytour.com.tw/upfiles/chinese/attractions/tw_attractions_caty1525006877.jpg" },
-                { name: "杜樂麗花園", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/114000/114997-Tuileries-Garden.jpg" },
-                { name: "橘園美術館", url: "https://upload.wikimedia.org/wikipedia/commons/1/11/2011-12-Musee_de_lorangerie.jpg" },
-                { name: "聖心堂", url: "https://www.leo-travel.idv.tw/wp-content/uploads/france-paris-sacre-coeur-canal-saint-martin-4-14377-photo.jpg" },
-                { name: "巴黎歌劇院", url: "https://image.cdn-eztravel.com.tw/vfhpfsdqHPVjCOo70gmlZ--PX6UKVDNWlEZ8BioawAw/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L3BvaS9GUi9QQVIvUGFsYWlzR2Fybmllci9zaHV0dGVyc3RvY2tfMjkxNzI0ODMyY29tcHJlc3MuanBn.jpg" },
-                { name: "凱旋門", url: "https://image.cdn-eztravel.com.tw/KZHAYmIPv66enrJBOK7nzvCh4px6eO8Sbx7_mXQ3dyA/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvRlJfMTI1NTg0OTA0LmpwZw.jpg" },
-                { name: "瑪摩丹美術館", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mus%C3%A9e_Marmottan.JPG/1200px-Mus%C3%A9e_Marmottan.JPG" },
-                { name: "巴黎地下墓穴", url: "https://french-nautilus.b-cdn.net/wp-content/uploads/2022/04/Catacombes-2.jpg" },
-                { name: "先賢祠", url: "https://www.caneis.com.tw/link/info/europ_info/Frence/images/Paris05-005-1.jpg" },
-                { name: "聖徒禮拜堂", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sainte_chapelle_-_Upper_level.jpg/1200px-Sainte_chapelle_-_Upper_level.jpg" },
-                { name: "巴黎聖母院", url: "https://image.cdn-eztravel.com.tw/m6_rnspVeKChiP4NUBfWntPO8MLymnKF-VFN2Sqoi6k/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L3BvaS9GUi9QQVIvTm90cmVEYW1lQ2F0aGVkcmFsL3NodXR0ZXJzdG9ja18xNjYxNzk3MTBjb21wcmVzcy5qcGc.jpg" },
-                { name: "瑪萊區", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/21/02/95/le-marais.jpg?w=1200&h=-1&s=1" },
-                { name: "巴黎大堂", url: "https://3.bp.blogspot.com/-SXWWbN1UNRQ/WZApz4m9cfI/AAAAAAAAhts/bHoGjEEyKuAtszQ6_ZoJB7WOZbwpw0vQwCEwYBhgL/s1600/DSC07880.JPG" },
-                { name: "巴黎迪士尼樂園", url: "https://www.kkday.com/zh-hk/blog/wp-content/uploads/900_%E9%BB%83%E6%98%8F%E5%9F%8E%E5%A0%A1-DSC_7652-2.jpeg" }
-            ];
-
-            // 米蘭景點資料
-            const milanSpots = [
-                { name: "米蘭大教堂", url: "https://cdn.walkerland.com.tw/images/upload/article/2022/02/m26624/d8fc647fcb32f5b370758f338d3d92f9b2fb9315.jpg" },
-                { name: "埃馬努埃萊二世長廊", url: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Galleria_Milano_%28179532365%29.jpeg" },
-                { name: "布雷拉畫廊", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/177000/177287-Pinacoteca-Di-Brera.jpg" },
-                { name: "聖瑪利亞感恩教堂", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Santa_Maria_delle_Grazie_Milan_2013.jpg/1200px-Santa_Maria_delle_Grazie_Milan_2013.jpg" },
-                { name: "森皮奧內公園", url: "https://static.liontech.com.tw/DS/go_images/1/4726/4801/4802/60144/Q133963/Parco_Sempione_Milano.webp" },
-                { name: "聖安布羅西奧大教堂", url: "https://pic.pimg.tw/greenync/1533995006-1152737519_wn.jpg" },
-                { name: "納維利", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/fa/8f/4b/liv-og-flot-belysning.jpg?w=1200&h=-1&s=1" },
-                { name: "科莫湖", url: "https://www.kikikokomedia.com/wp-content/uploads/%E7%A7%91%E8%8E%AB%E6%B9%96-lago-di-como_cover.jpg" }
-            ];
-
-            // 羅馬景點資料
-            const romeSpots = [
-                { name: "羅馬競技場", url: "https://www.bring-you.info/wp-content/uploads/2020/07/Colosseum_in_Rome_sunrise-1.jpg" },
-                { name: "西斯汀小堂", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcyWlfIYhYnkq7wbfpaFhP9CBMpI7DMujiDQ&s" },
-                { name: "納沃納廣場", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/20000/20328-Piazza-Navona.jpg" },
-                { name: "特雷維噴泉", url: "https://www.settour.com.tw/ss_img/poi/20210325/1f2786d3-8198-49e8-a947-787f73ae2f37.jpg" },
-                { name: "古羅馬廣場", url: "https://image.cdn-eztravel.com.tw/1WSnRkd0Uo_rxCUAy4-nCjtY3LF7dicO86pDjL2Y_Ro/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSVRfMjU3Mjk3MDgwLmpwZw.jpg" },
-                { name: "聖伯多祿大殿", url: "https://www.sundaytour.com.tw/upfiles/chinese/attractions/tw_attractions_caty01481742316.jpg" },
-                { name: "梵蒂岡博物館", url: "https://photo.settour.com.tw/900x600/https://www.settour.com.tw/ss_img/info/location/ROM/M0/ROM0000022/ROM0000022_93713.jpg" }
-            ];
-
-            // 更新的清空景點函數
-            function clearDestinations(prefix) {
-                const morningPhoto = document.getElementById(`${prefix}-morning-photo`);
-                const afternoonPhoto = document.getElementById(`${prefix}-afternoon-photo`);
-                const morningLabel = document.getElementById(`${prefix}-morning-label`);
-                const afternoonLabel = document.getElementById(`${prefix}-afternoon-label`);
-
-                if (morningPhoto) {
-                    morningPhoto.style.display = "none";
-                    morningPhoto.src = "";
-                }
-                if (afternoonPhoto) {
-                    afternoonPhoto.style.display = "none";
-                    afternoonPhoto.src = "";
-                }
-                if (morningLabel) morningLabel.style.display = "none";
-                if (afternoonLabel) afternoonLabel.style.display = "none";
-            }
 
             // 通用的隨機生成景點函數
             function generatePhotos(prefix) {
@@ -1380,42 +1187,42 @@
                     spots = city === '東京' ? tokyoSpots : osakaSpots;
                 } else if (prefix === 'seoul') {
                     spots = seoulSpots;
-                } else if (prefix === 'thailand') {
-                    const city = document.getElementById('city-select-thailand').value;
-                    spots = city === '曼谷' ? bangkokSpots : pattayaSpots;
-                } else if (prefix === 'usa') {
-                    const city = document.getElementById('city-select-usa').value;
-                    spots = city === '洛杉磯' ? losAngelesSpots : [];
-                } else if (prefix === 'france') {
-                    const city = document.getElementById('city-select-france').value;
-                    spots = city === '巴黎' ? parisSpots : [];
-                } else if (prefix === 'italy') {
-                    const city = document.getElementById('city-select-italy').value;
-                    spots = city === '米蘭' ? milanSpots : romeSpots;
                 }
-
+    
                 if (spots.length > 0) {
                     const morningSpot = spots[Math.floor(Math.random() * spots.length)];
                     let afternoonSpot;
                     do {
                         afternoonSpot = spots[Math.floor(Math.random() * spots.length)];
                     } while (afternoonSpot.url === morningSpot.url);
-
-                    const morningPhoto = document.getElementById(`${prefix}-morning-photo`);
-                    const afternoonPhoto = document.getElementById(`${prefix}-afternoon-photo`);
-
-                    morningPhoto.src = morningSpot.url;
-                    morningPhoto.alt = morningSpot.name;
-                    morningPhoto.style.display = "block";
+    
+                    document.getElementById(`${prefix}-morning-photo`).src = morningSpot.url;
+                    document.getElementById(`${prefix}-morning-photo`).style.display = "block";
                     document.getElementById(`${prefix}-morning-label`).innerText = morningSpot.name;
                     document.getElementById(`${prefix}-morning-label`).style.display = "block";
-
-                    afternoonPhoto.src = afternoonSpot.url;
-                    afternoonPhoto.alt = afternoonSpot.name;
-                    afternoonPhoto.style.display = "block";
+    
+                    document.getElementById(`${prefix}-afternoon-photo`).src = afternoonSpot.url;
+                    document.getElementById(`${prefix}-afternoon-photo`).style.display = "block";
                     document.getElementById(`${prefix}-afternoon-label`).innerText = afternoonSpot.name;
                     document.getElementById(`${prefix}-afternoon-label`).style.display = "block";
                 }
+            }
+            function clearDestinations(prefix) {
+                const morningPhoto = document.getElementById(`${prefix}-morning-photo`);
+                const afternoonPhoto = document.getElementById(`${prefix}-afternoon-photo`);
+                const morningLabel = document.getElementById(`${prefix}-morning-label`);
+                const afternoonLabel = document.getElementById(`${prefix}-afternoon-label`);
+
+                if (morningPhoto) {
+                    morningPhoto.style.display = "none";
+                    morningPhoto.src = ""; // 確保圖片 src 為空
+                }
+                if (afternoonPhoto) {
+                    afternoonPhoto.style.display = "none";
+                    afternoonPhoto.src = ""; // 確保圖片 src 為空
+                }
+                if (morningLabel) morningLabel.style.display = "none";
+                if (afternoonLabel) afternoonLabel.style.display = "none";
             }
 
             // 當日本 modal 打開時清空景點
@@ -1429,23 +1236,6 @@
                 console.log('Seoul modal is opened.clearDestinations()');
                 clearDestinations('seoul');
             });
-            // 當泰國 modal 打開時清空圖片
-            document.getElementById('portfolioModal3').addEventListener('show.bs.modal', function () {
-                clearDestinations('thailand');
-            });
-            // 當美國 modal 打開時清空圖片
-            document.getElementById('portfolioModal4').addEventListener('show.bs.modal', function () {
-                clearDestinations('usa');
-            });
-            // 當法國 modal 打開時清空圖片
-            document.getElementById('portfolioModal5').addEventListener('show.bs.modal', function () {
-                clearDestinations('france');
-            });
-            // 當義大利 modal 打開時清空圖片
-            document.getElementById('portfolioModal6').addEventListener('show.bs.modal', function () {
-                clearDestinations('italy');
-            });
-
         </script>
 
     </body>

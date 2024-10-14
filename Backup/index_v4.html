@@ -1174,44 +1174,6 @@
                                             <td>收藏了大量無價的藝術品和古代文物，展現了數個世紀的文化和藝術精華。這裡的亮點包括西斯汀小堂的壁畫、拉斐爾房間、以及無數古希臘和羅馬雕塑。</td>
                                         </tr>
                                     </table>
-
-                                    <!-- 插入空白區域 -->
-                                    <div class="spacer" style="height: 50px;"></div>
-                                    <!-- 插入的功能（選擇城市和隨機生成景點）開始 -->
-                                    <h3 class="text-uppercase ">【隨機產生旅遊景點】</h3>
-
-                                    <div class="dropdown my-3">
-                                        <label for="city-select-italy">選擇城市：</label>
-                                        <select id="city-select-italy" class="form-control" onchange="clearDestinations('italy')">
-                                            <option value="米蘭">米蘭</option>
-                                            <option value="羅馬">羅馬</option>
-                                        </select>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="label">上午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="italy-morning-photo" src="" alt="上午景點" class="photo" />
-                                                <div id="italy-morning-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="label">下午景點</div>
-                                            <div class="box bg-light p-3 border yellow-background">
-                                                <img id="italy-afternoon-photo" src="" alt="下午景點" class="photo" />
-                                                <div id="italy-afternoon-label" class="photo-label"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                     <div class="spacer" style="height: 50px;"></div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-primary" onclick="generatePhotos('italy')">隨機生成景點</button>
-                                    </div>
-
-                                     <!-- 插入空白區域 -->
-                                     <div class="spacer" style="height: 50px;"></div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         回到上一頁
@@ -1330,29 +1292,6 @@
                 { name: "巴黎迪士尼樂園", url: "https://www.kkday.com/zh-hk/blog/wp-content/uploads/900_%E9%BB%83%E6%98%8F%E5%9F%8E%E5%A0%A1-DSC_7652-2.jpeg" }
             ];
 
-            // 米蘭景點資料
-            const milanSpots = [
-                { name: "米蘭大教堂", url: "https://cdn.walkerland.com.tw/images/upload/article/2022/02/m26624/d8fc647fcb32f5b370758f338d3d92f9b2fb9315.jpg" },
-                { name: "埃馬努埃萊二世長廊", url: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Galleria_Milano_%28179532365%29.jpeg" },
-                { name: "布雷拉畫廊", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/177000/177287-Pinacoteca-Di-Brera.jpg" },
-                { name: "聖瑪利亞感恩教堂", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Santa_Maria_delle_Grazie_Milan_2013.jpg/1200px-Santa_Maria_delle_Grazie_Milan_2013.jpg" },
-                { name: "森皮奧內公園", url: "https://static.liontech.com.tw/DS/go_images/1/4726/4801/4802/60144/Q133963/Parco_Sempione_Milano.webp" },
-                { name: "聖安布羅西奧大教堂", url: "https://pic.pimg.tw/greenync/1533995006-1152737519_wn.jpg" },
-                { name: "納維利", url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/fa/8f/4b/liv-og-flot-belysning.jpg?w=1200&h=-1&s=1" },
-                { name: "科莫湖", url: "https://www.kikikokomedia.com/wp-content/uploads/%E7%A7%91%E8%8E%AB%E6%B9%96-lago-di-como_cover.jpg" }
-            ];
-
-            // 羅馬景點資料
-            const romeSpots = [
-                { name: "羅馬競技場", url: "https://www.bring-you.info/wp-content/uploads/2020/07/Colosseum_in_Rome_sunrise-1.jpg" },
-                { name: "西斯汀小堂", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcyWlfIYhYnkq7wbfpaFhP9CBMpI7DMujiDQ&s" },
-                { name: "納沃納廣場", url: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/20000/20328-Piazza-Navona.jpg" },
-                { name: "特雷維噴泉", url: "https://www.settour.com.tw/ss_img/poi/20210325/1f2786d3-8198-49e8-a947-787f73ae2f37.jpg" },
-                { name: "古羅馬廣場", url: "https://image.cdn-eztravel.com.tw/1WSnRkd0Uo_rxCUAy4-nCjtY3LF7dicO86pDjL2Y_Ro/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvSVRfMjU3Mjk3MDgwLmpwZw.jpg" },
-                { name: "聖伯多祿大殿", url: "https://www.sundaytour.com.tw/upfiles/chinese/attractions/tw_attractions_caty01481742316.jpg" },
-                { name: "梵蒂岡博物館", url: "https://photo.settour.com.tw/900x600/https://www.settour.com.tw/ss_img/info/location/ROM/M0/ROM0000022/ROM0000022_93713.jpg" }
-            ];
-
             // 更新的清空景點函數
             function clearDestinations(prefix) {
                 const morningPhoto = document.getElementById(`${prefix}-morning-photo`);
@@ -1389,9 +1328,6 @@
                 } else if (prefix === 'france') {
                     const city = document.getElementById('city-select-france').value;
                     spots = city === '巴黎' ? parisSpots : [];
-                } else if (prefix === 'italy') {
-                    const city = document.getElementById('city-select-italy').value;
-                    spots = city === '米蘭' ? milanSpots : romeSpots;
                 }
 
                 if (spots.length > 0) {
@@ -1418,6 +1354,8 @@
                 }
             }
 
+
+
             // 當日本 modal 打開時清空景點
             document.getElementById('portfolioModal1').addEventListener('show.bs.modal', function () {
                 console.log('Japan modal is opened.clearDestinations()');
@@ -1440,10 +1378,6 @@
             // 當法國 modal 打開時清空圖片
             document.getElementById('portfolioModal5').addEventListener('show.bs.modal', function () {
                 clearDestinations('france');
-            });
-            // 當義大利 modal 打開時清空圖片
-            document.getElementById('portfolioModal6').addEventListener('show.bs.modal', function () {
-                clearDestinations('italy');
             });
 
         </script>
