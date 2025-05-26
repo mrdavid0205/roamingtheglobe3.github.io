@@ -218,7 +218,6 @@
               </div>
             </div>
           </section>
-          
           <script>
             async function convertCurrency() {
               const amountInput = document.getElementById("amount").value.trim();
@@ -238,23 +237,22 @@
               }
           
               try {
-                const response = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`);
+                const url = `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`;
+                const response = await fetch(url);
                 const data = await response.json();
-                const rate = data.rates[to];
           
-                if (!rate) {
-                  resultDisplay.textContent = "無法取得匯率資訊。";
+                if (!data.result) {
+                  resultDisplay.textContent = "轉換失敗，請稍後再試。";
                   return;
                 }
           
-                resultDisplay.textContent = `${amount} ${from} = ${rate.toFixed(2)} ${to}`;
+                resultDisplay.textContent = `${amount} ${from} = ${data.result.toFixed(2)} ${to}`;
               } catch (error) {
-                resultDisplay.textContent = "轉換時發生錯誤，請稍後再試。";
-                console.error("匯率取得錯誤：", error);
+                resultDisplay.textContent = "無法取得即時匯率，請確認網路連線。";
+                console.error("API error:", error);
               }
             }
           </script>
-          
                 
         <!-- Videos-->
         <section class="page-section" id="videos">
