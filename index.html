@@ -190,66 +190,71 @@
               <div class="text-center">
                 <h2 class="section-heading text-uppercase">神奇妙妙工具</h2>
                 <div class="converter" style="background:white; padding:20px; border-radius:12px; max-width:400px; margin:20px auto; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-                    <h3>匯率轉換器</h3>
-                    <input type="number" id="amount" placeholder="請輸入金額" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
-                    
-                    <label for="from_currency">原始貨幣：</label>
-                    <select id="from_currency" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
-                      <option value="USD">USD（美元）</option>
-                      <option value="TWD">TWD（台幣）</option>
-                      <option value="JPY">JPY（日圓）</option>
-                      <option value="EUR">EUR（歐元）</option>
-                    </select>
-                    
-                    <label for="to_currency">目標貨幣：</label>
-                    <select id="to_currency" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
-                      <option value="TWD">TWD（台幣）</option>
-                      <option value="USD">USD（美元）</option>
-                      <option value="JPY">JPY（日圓）</option>
-                      <option value="EUR">EUR（歐元）</option>
-                    </select>
-                    
-                    <button onclick="convertCurrency()" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; background-color:#4CAF50; color:white; font-size:16px; border:none; cursor:pointer;">
-                      轉換
-                    </button>
-                    <p id="result" style="margin-top:15px; font-weight:bold; color:#333;"></p>
-                    <p style="font-size:14px; color:gray;">* 匯率為估算值，僅供參考。</p>
-                  </div>
+                  <h3>匯率轉換器</h3>
+                  <input type="number" id="amount" placeholder="請輸入金額" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+                  
+                  <label for="from_currency">原始貨幣：</label>
+                  <select id="from_currency" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+                    <option value="USD">USD（美元）</option>
+                    <option value="TWD">TWD（台幣）</option>
+                    <option value="JPY">JPY（日圓）</option>
+                    <option value="EUR">EUR（歐元）</option>
+                  </select>
+                  
+                  <label for="to_currency">目標貨幣：</label>
+                  <select id="to_currency" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+                    <option value="TWD">TWD（台幣）</option>
+                    <option value="USD">USD（美元）</option>
+                    <option value="JPY">JPY（日圓）</option>
+                    <option value="EUR">EUR（歐元）</option>
+                  </select>
+                  
+                  <button onclick="convertCurrency()" style="width:100%; padding:10px; margin-top:10px; border-radius:8px; background-color:#4CAF50; color:white; font-size:16px; border:none; cursor:pointer;">
+                    轉換
+                  </button>
+                  <p id="result" style="margin-top:15px; font-weight:bold; color:#333;"></p>
+                  <p style="font-size:14px; color:gray;">* 匯率為即時估算值，僅供參考。</p>
                 </div>
               </div>
-            </section>
-            
-            <script>
-              function convertCurrency() {
-                const amountInput = document.getElementById("amount").value.trim();
-                const amount = parseFloat(amountInput);
-                const from = document.getElementById("from_currency").value;
-                const to = document.getElementById("to_currency").value;
-                const resultDisplay = document.getElementById("result");
-            
-                if (!amountInput || isNaN(amount) || amount <= 0) {
-                  resultDisplay.textContent = "請輸入正確的金額。";
-                  return;
-                }
-            
-                const ratesToTWD = {
-                  TWD: 1,
-                  USD: 32,
-                  JPY: 0.22,
-                  EUR: 35
-                };
-            
-                if (!(from in ratesToTWD) || !(to in ratesToTWD)) {
-                  resultDisplay.textContent = "不支援的幣別。";
-                  return;
-                }
-            
-                const twdAmount = amount * ratesToTWD[from];
-                const converted = twdAmount / ratesToTWD[to];
-            
-                resultDisplay.textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+            </div>
+          </section>
+          
+          <script>
+            async function convertCurrency() {
+              const amountInput = document.getElementById("amount").value.trim();
+              const amount = parseFloat(amountInput);
+              const from = document.getElementById("from_currency").value;
+              const to = document.getElementById("to_currency").value;
+              const resultDisplay = document.getElementById("result");
+          
+              if (!amountInput || isNaN(amount) || amount <= 0) {
+                resultDisplay.textContent = "請輸入正確的金額。";
+                return;
               }
-            </script>
+          
+              if (from === to) {
+                resultDisplay.textContent = `${amount} ${from} = ${amount.toFixed(2)} ${to}`;
+                return;
+              }
+          
+              try {
+                const response = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`);
+                const data = await response.json();
+                const rate = data.rates[to];
+          
+                if (!rate) {
+                  resultDisplay.textContent = "無法取得匯率資訊。";
+                  return;
+                }
+          
+                resultDisplay.textContent = `${amount} ${from} = ${rate.toFixed(2)} ${to}`;
+              } catch (error) {
+                resultDisplay.textContent = "轉換時發生錯誤，請稍後再試。";
+                console.error("匯率取得錯誤：", error);
+              }
+            }
+          </script>
+          
                 
         <!-- Videos-->
         <section class="page-section" id="videos">
