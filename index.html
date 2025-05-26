@@ -213,11 +213,12 @@
                     轉換
                   </button>
                   <p id="result" style="margin-top:15px; font-weight:bold; color:#333;"></p>
-                  <p style="font-size:14px; color:gray;">* 匯率為即時估算值，僅供參考。</p>
+                  <p style="font-size:14px; color:gray;">* 匯率為即時估算值，資料來自 exchangerate.host。</p>
                 </div>
               </div>
             </div>
           </section>
+          
           <script>
             async function convertCurrency() {
               const amountInput = document.getElementById("amount").value.trim();
@@ -248,11 +249,12 @@
           
                 resultDisplay.textContent = `${amount} ${from} = ${data.result.toFixed(2)} ${to}`;
               } catch (error) {
-                resultDisplay.textContent = "無法取得即時匯率，請確認網路連線。";
+                resultDisplay.textContent = "無法取得即時匯率，請檢查網路連線。";
                 console.error("API error:", error);
               }
             }
           </script>
+          
                 
         <!-- Videos-->
         <section class="page-section" id="videos">
